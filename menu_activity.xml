@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.apps.robertbrewer.stanfordtimecard.MainActivity">
+    <item
+        android:id="@+id/menu_home"
+        android:title="Home"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_payrollHours"
+        android:title="Payroll Hours"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/menu_deleteDatabase"
+        android:title="Delete Database"
+        android:enabled="true"
+        android:visible="true"/>
+
+
+
+</menu>

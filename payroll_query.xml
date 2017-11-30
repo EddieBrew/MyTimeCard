@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editTextMessage"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    android:id="@+id/query_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnBDate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btnEDate"
+        android:layout_marginTop="11dp"
+        android:editable="false"
+        android:focusableInTouchMode="false"
+        android:text="Beginning Date"
+        tools:layout_editor_absoluteX="-255dp"
+        tools:layout_editor_absoluteY="-24dp" />
+
+
+    <EditText
+        android:id="@+id/editTextBDate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnEDate"
+        android:layout_alignStart="@+id/btnGetPayPeriod"
+        android:layout_marginStart="36dp"
+        android:editable="true"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="date"
+        android:selectAllOnFocus="true"
+        android:text="1/1/2017"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/black"
+        android:textColorLink="@android:color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnEDate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBDate"
+        android:layout_marginTop="25dp"
+        android:layout_toStartOf="@+id/editTextBDate"
+        android:cursorVisible="true"
+        android:focusableInTouchMode="false"
+        android:text="Ending Date" />
+
+
+    <EditText
+        android:id="@+id/editTextEDate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextBDate"
+        android:layout_alignTop="@+id/btnEDate"
+        android:cursorVisible="true"
+        android:editable="true"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="date"
+        android:text="12/31/2017"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btnGetPayPeriod"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEDate"
+        android:layout_centerHorizontal="true"
+        android:cursorVisible="false"
+        android:focusableInTouchMode="false"
+        android:text="Get Pay Hours" />
+
+    <EditText
+        android:id="@+id/editTextPayrollMessage"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnGetPayPeriod"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_orange_light"
+        android:cursorVisible="true"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textMultiLine"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/listview_dailyHours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/editTextPayrollMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        tools:background="@android:color/holo_green_light" />
+
+
+</RelativeLayout>

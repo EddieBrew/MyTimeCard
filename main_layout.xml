@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apps.robertbrewer.stanfordtimecard.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_mainA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <Button
+            android:id="@+id/buttonDate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/editTextEventNum"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="false"
+            android:paddingTop="10dp"
+            android:text=" ENTER DATE" />
+
+        <Button
+            android:id="@+id/buttonTimeIn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/buttonDate"
+            android:layout_below="@+id/buttonDate"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="false"
+            android:paddingTop="10dp"
+            android:text="ENTER START TIME" />
+
+        <Button
+            android:id="@+id/buttonTimeOut"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/buttonTimeIn"
+            android:layout_below="@+id/buttonTimeIn"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="false"
+            android:paddingTop="10dp"
+            android:text=" ENTER END TIME" />
+
+
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/buttonTimeOut"
+            android:layout_below="@+id/buttonTimeOut"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+
+            android:text="(Enter Event Number below)"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextEventNum"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText5"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextEventNum"
+            android:layout_below="@+id/editTextEventNum"
+            android:editable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:text="(Enter Event Name below)"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextEventName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText6"
+            android:layout_below="@+id/editText6"
+            android:ems="10"
+            android:inputType="text" />
+
+        <CheckBox
+            android:id="@+id/checkBoxPaid"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextEventName"
+            android:layout_below="@+id/editTextEventName"
+            android:checked="true"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="true"
+            android:paddingTop="10dp"
+            android:text="Lunch (Check, if Paid)" />
+
+        <Button
+            android:id="@+id/buttonSetData"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/checkBoxPaid"
+            android:layout_below="@+id/checkBoxPaid"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="false"
+            android:paddingTop="10dp"
+            android:text="COMPUTE WORKED HOURS"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRegHourslabel"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/buttonSetData"
+            android:layout_weight="0.19"
+            android:paddingTop="10dp"
+            android:text=" Regular Hours = "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRegHours"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/buttonSetData"
+            android:layout_marginStart="42dp"
+            android:layout_toEndOf="@+id/textViewRegHourslabel"
+            android:layout_weight="0.19"
+            android:paddingTop="10dp"
+            android:text="0"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewOTHourslabel"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textViewRegHourslabel"
+            android:layout_weight="0.19"
+            android:paddingTop="10dp"
+            android:text=" OverTime Hours = "
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewOTHours"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/textViewRegHours"
+            android:layout_below="@+id/textViewRegHours"
+            android:paddingTop="10dp"
+            android:text="0"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewYTDlabel"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewOTHourslabel"
+            android:layout_weight="0.19"
+            android:paddingTop="10dp"
+            android:text="Year To Date Hours = "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewYTD"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/textViewOTHours"
+            android:layout_below="@+id/textViewOTHours"
+            android:paddingTop="10dp"
+            android:text="0"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
